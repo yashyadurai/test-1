@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Capture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Camera</h1>
+        
+        <div class="camera-section">
+            <div id="error-message" class="hidden"></div>
+            
+            <div class="video-container">
+                <video id="camera-feed" autoplay playsinline></video>
+                <div id="recording-indicator" class="hidden">
+                    <span>⏺</span> Recording
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="capture-photo" class="btn btn-primary">Take Photo</button>
+                <button id="toggle-recording" class="btn btn-primary">Recording</button>
+                <button id="toggle-camera" class="btn btn-secondary">Toggle Camera</button>
+            </div>
+        </div>
+        
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <h2>Gallery</h2>
+                <div class="gallery-actions">
+                    <button id="download-all" class="btn btn-primary">Download All</button>
+                    <button id="clear-all" class="btn btn-danger">Clear All</button>
+                </div>
+            </div>
+            
+            <div id="media-gallery">
+                <div class="empty-state">
+                    <p>No media captured yet. Start taking photos or recording videos!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <canvas id="photo-canvas"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>
